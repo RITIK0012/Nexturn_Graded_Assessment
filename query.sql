@@ -28,7 +28,7 @@ db.orders.insertMany([
 ]);
 
 -- Find Orders for a Specific Customer
-const customer = db.customers.findOne({ name: "Rishi Raj" });
+const customer = db.customers.findOne({ name: "Rohit Sharma" });
 db.orders.find({ customer_id: customer._id });
 
 -- Find the Customer for a Specific Order
@@ -88,7 +88,7 @@ db.orders.aggregate([
 
 
 --Find All Products Ordered by a Specific Customer
-const customer = db.customers.findOne({ name: "Rishi Raj" });
+const customer = db.customers.findOne({ name: "Rohit Sharma" });
 db.orders.aggregate([
   { $match: { customer_id: customer._id } },
   { $unwind: "$items" },
@@ -108,7 +108,7 @@ db.orders.aggregate([
 
 
 --Add a New Order for an Existing Customer
-const customer = db.customers.findOne({ name: "Utsav Rai" });
+const customer = db.customers.findOne({ name: "Priya Singh" });
 db.orders.insertOne({
   order_id: "ORD123789",
   customer_id: customer._id,
