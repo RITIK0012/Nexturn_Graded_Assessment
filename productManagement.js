@@ -1,4 +1,3 @@
-// Sample JSON data for products
 const jsonData = `[
     {
       "id": 1,
@@ -73,8 +72,6 @@ const jsonData = `[
     console.log(`Products in Category "${category}":`, categoryProducts);
     return categoryProducts;
   }
-  
-  // Example of how to use the functions
   
   // Parse the JSON data into an array of products
   const products = parseProducts(jsonData);
